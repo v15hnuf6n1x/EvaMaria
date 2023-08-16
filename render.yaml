@@ -1,0 +1,27 @@
+services:
+  - type: web
+    plan: free
+    name: MR.V-S_eva
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    repo:    https://github.com/v15hnuf6n1x/EvaMaria.git 
+    branch: master
+    envVars:
+      - key: BOT_TOKEN 
+        sync: true
+      - key: API_ID 
+        sync: true
+      - key: API_HASH 
+        sync: true
+      - key: FORCE_SUB 
+        sync: false
+      - key: DB_NAME 
+        sync: true
+      - key: DB_URL 
+        sync: true
+      - key: START_PIC 
+        sync: false
+      - key: ADMIN 
+        sync: true    
+    autoDeploy: false 
